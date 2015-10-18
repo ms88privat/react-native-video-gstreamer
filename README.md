@@ -1,6 +1,20 @@
 # react-native-video-gstreamer
 
+Android only
+
 `npm install --save react-native-video-gstreamer`
+
+Features:
+- url srtreaming
+- play / stop / fullscreen controls
+- volumne control
+- device orientation control 
+
+Todo:
+- [] determine which file formats and urls are possible to play
+- [] install guide
+- [] clean up example
+- ...
 
 Example Usage
 
