@@ -1,4 +1,6 @@
-# react-native-android-gstreamer
+# react-native-video-gstreamer
+
+`npm install --save react-native-video-gstreamer`
 
 Example Usage
 
