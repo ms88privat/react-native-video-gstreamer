@@ -25,17 +25,21 @@ Todo:
 1. npm install --save react-native-video-gstreamer
 
 2. In android/setting.gradle
+    ```
     ...
     include ':ReactNativeMediaPlayerAndroid', ':app'
     project(':ReactNativeMediaPlayerAndroid').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-video-gstreamer/android')
+    ```
     
 3. In android/app/build.gradle, add ReactNativeMediaPlayerAndroid library project.
+    ```
     dependencies {
         ....
         compile project(':ReactNativeMediaPlayerAndroid') 
     }
-
+    ```
 4. Register Module in MainAcrivity.java (src/main/java/.../MainActivity.Java)
+    ```
     ....
     import com.nick.reactnativemediaplayer.MediaPlayerPackage;  //add new package component framework for media player
     import com.nick.devicecontroller.DeviceControllerPackage;  //add new package component framework for device control 
@@ -44,7 +48,7 @@ Todo:
      .addPackage(new MainReactPackage()) //add new React Native Package for media player
      .addPackage(new MediaPlayerPackage()) 
      .addPackage(new DeviceControllerPackage(this)) 
-
+    ```
 5. extract jni libaries 'node_modules/react-native-video-gestreamer/jiniLibs' & copy them (armeabi, armeabi-v7a, ...) into into src/main/jniLibs/
 
 #Example Usage
