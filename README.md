@@ -294,4 +294,4 @@ AppRegistry.registerComponent('ReactNativeStreamingPlayer', () => ReactNativeStr
 
 ```
 
-All credits to Nicoloas Hagenov for the good work done.
+All credits to Nicoloas Hagenov (nicoloas.hagenov327@gmail.com) for the good work done. 
