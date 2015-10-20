@@ -1,7 +1,5 @@
 # react-native-video-gstreamer
 
-# not working yet - missing jniLibs - coming soon #
-
 Android only
 
 `npm install --save react-native-video-gstreamer`
