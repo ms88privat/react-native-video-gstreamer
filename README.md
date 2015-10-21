@@ -52,7 +52,7 @@ Todo:
     ```
     and copy the folder (armeabi, armeabi-v7a, ...) into 
     ```
-    node_modules/android/src/main/jniLibs/
+    node_modules/react-native-video-gestreamer/android/src/main/jniLibs/
     ```
 
 #Example Usage
