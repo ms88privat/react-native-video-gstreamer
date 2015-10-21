@@ -18,7 +18,6 @@ Todo:
 - ...
 
 #Install Guide
-(not tested yet!)
 
 1. npm install --save react-native-video-gstreamer
 
@@ -47,7 +46,14 @@ Todo:
      .addPackage(new MediaPlayerPackage()) 
      .addPackage(new DeviceControllerPackage(this)) 
     ```
-5. extract jni libaries 'node_modules/react-native-video-gestreamer/jiniLibs' & copy them (armeabi, armeabi-v7a, ...) into into src/main/jniLibs/
+5. extract jni libaries 
+    ```
+    'node_modules/react-native-video-gestreamer/jiniLibs' 
+    ```
+    and copy the folder (armeabi, armeabi-v7a, ...) into 
+    ```
+    node_modules/android/src/main/jniLibs/
+    ```
 
 #Example Usage
 
@@ -55,8 +61,7 @@ Todo:
 'use strict';
 
 var React = require('react-native');
-var MediaPlayer = require('react-native-mediaplayer');
-var {bp, vw, vh} = require('react-native-relative-units')(375);
+var MediaPlayer = require('react-native-video-gstreamer');
 var {
   AppRegistry,
   StyleSheet,
@@ -96,7 +101,7 @@ var mediaPlayer = require('react-native').NativeModules.MediaPlayerAndroidModule
 var deviceController = require('react-native').NativeModules.DeviceContollerModule;
 var ReactNativeStreamingPlayer = React.createClass({
     mediaStatus : StreamingState.DEINITIALIZED,
-    mediaURL : "udp://172.20.1.31:1234",
+    mediaURL : "udp://239.255.0.1:1234",
     mediaVolume: 10,
     
     /*
@@ -203,7 +208,7 @@ var ReactNativeStreamingPlayer = React.createClass({
             return (<View>
                     <MediaPlayer
                         ref={component => this._mediaPlayer = component}
-                        style={{ height: vh * 40, width:  bp * 350}}
+                        style={{ height: 400, width: 350}}
                         onChange={this.onStreamEvent} 
                         />
                 </View>);
@@ -211,7 +216,7 @@ var ReactNativeStreamingPlayer = React.createClass({
             return (<View>
                     <MediaPlayer
                         ref={component => this._mediaPlayer = component}
-                        style={{ height: vh * 80, width:  bp * 350}}
+                        style={{ height: 500, width: 350}}
                         onChange={this.onStreamEvent} 
                         />
                 </View>);            
@@ -283,7 +288,7 @@ var styles = StyleSheet.create({
         },
     textInput:{
         marginLeft: 10,
-        width: bp * 200,
+        width: 200,
         borderWidth: 1,
         borderColor: "#888888",
         height: 40
