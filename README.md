@@ -1,5 +1,7 @@
 # react-native-video-gstreamer
 
+# no longer maintained, does NOT work with new RN versions...
+
 Android only
 
 `npm install --save react-native-video-gstreamer`
